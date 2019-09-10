@@ -1,6 +1,6 @@
 import { environment } from './../../environments/environment';
 import { Component, OnInit } from '@angular/core';
-import mapboxgl from 'mapbox-gl'
+import mapboxgl from 'mapbox-gl';
 
 @Component({
   selector: 'app-mapa',
@@ -22,7 +22,7 @@ export class MapaComponent implements OnInit {
     style: 'mapbox://styles/mapbox/dark-v10',
     // style: 'mapbox://styles/mapbox/satellite-v9',
 
-    zoom:13,
+    zoom: 13,
     // center: [-69.8710722, 18.497407],
     // center: [-70.016921, 18.4801923]
     center: [-69.89546539999999, 18.4708109 ]
@@ -31,8 +31,8 @@ export class MapaComponent implements OnInit {
     map.resize();
 
     navigator.geolocation.getCurrentPosition(position => {
-      this.lat=position.coords.latitude;
-      this.long=position.coords.longitude;
+      this.lat= position.coords.latitude;
+      this.long= position.coords.longitude;
       console.log(position.coords.latitude, position.coords.longitude);
     })
 
@@ -86,7 +86,7 @@ return true;
 };
 
 
-    map.on('load', ()=> {
+    map.on('load', () => {
 
       map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
 
